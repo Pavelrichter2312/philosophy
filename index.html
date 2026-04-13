@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TIC-TAC-TOE // SYSTEM</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+    :root {
+      --green: #00ff41;
+      --green-dim: #00cc33;
+      --green-faint: rgba(0, 255, 65, 0.08);
+      --green-glow: 0 0 8px #00ff41, 0 0 20px rgba(0, 255, 65, 0.4);
+      --bg: #0a0a0a;
+      --bg2: #0f0f0f;
+      --border: rgba(0, 255, 65, 0.25);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--green);
+      font-family: 'Share Tech Mono', 'Courier New', monospace;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Scanline overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.08) 2px,
+        rgba(0, 0, 0, 0.08) 4px
+      );
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    /* Matrix rain canvas */
+    #matrix {
+      position: fixed;
+      inset: 0;
+      opacity: 0.04;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+    }
+
+    .title {
+      font-size: 2rem;
+      letter-spacing: 0.3em;
+      text-shadow: var(--green-glow);
+      animation: flicker 6s infinite;
+    }
+
+    .subtitle {
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      color: var(--green-dim);
+      margin-top: 4px;
+      opacity: 0.7;
+    }
+
+    @keyframes flicker {
+      0%, 95%, 100% { opacity: 1; }
+      96% { opacity: 0.7; }
+      97% { opacity: 1; }
+      98% { opacity: 0.5; }
+      99% { opacity: 1; }
+    }
+
+    .status-bar {
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      color: var(--green-dim);
+      border: 1px solid var(--border);
+      padding: 6px 20px;
+      background: var(--green-faint);
+      min-width: 280px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .status-bar::before {
+      content: '> ';
+      color: var(--green);
+      text-shadow: var(--green-glow);
+    }
+
+    #status-text {
+      transition: opacity 0.2s;
+    }
+
+    .score-board {
+      display: flex;
+      gap: 16px;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+    }
+
+    .score-item {
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      background: var(--green-faint);
+      text-align: center;
+    }
+
+    .score-item .label {
+      color: var(--green-dim);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+    }
+
+    .score-item .val {
+      font-size: 1.3rem;
+      text-shadow: var(--green-glow);
+      margin-top: 2px;
+    }
+
+    /* Board */
+    .board-wrapper {
+      position: relative;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      box-shadow: 0 0 30px rgba(0, 255, 65, 0.1), inset 0 0 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .cell {
+      width: 110px;
+      height: 110px;
+      background: var(--bg2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      cursor: pointer;
+      position: relative;
+      transition: background 0.15s;
+      user-select: none;
+    }
+
+    .cell:hover:not(.taken) {
+      background: var(--green-faint);
+    }
+
+    .cell.taken {
+      cursor: default;
+    }
+
+    .cell .mark {
+      opacity: 0;
+      transform: scale(0.4);
+      transition: opacity 0.2s, transform 0.2s;
+      text-shadow: var(--green-glow);
+    }
+
+    .cell .mark.show {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .cell.X .mark {
+      color: var(--green);
+    }
+
+    .cell.O .mark {
+      color: #00aaff;
+      text-shadow: 0 0 8px #00aaff, 0 0 20px rgba(0, 170, 255, 0.4);
+    }
+
+    .cell.win-cell {
+      background: rgba(0, 255, 65, 0.12) !important;
+      animation: pulse-win 0.8s infinite alternate;
+    }
+
+    @keyframes pulse-win {
+      from { background: rgba(0, 255, 65, 0.08); }
+      to   { background: rgba(0, 255, 65, 0.2); }
+    }
+
+    /* Corner decorations */
+    .board-wrapper::before,
+    .board-wrapper::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-color: var(--green);
+      border-style: solid;
+      box-shadow: var(--green-glow);
+    }
+
+    .board-wrapper::before {
+      top: -6px; left: -6px;
+      border-width: 2px 0 0 2px;
+    }
+
+    .board-wrapper::after {
+      bottom: -6px; right: -6px;
+      border-width: 0 2px 2px 0;
+    }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      font-family: inherit;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      color: var(--green);
+      background: transparent;
+      border: 1px solid var(--green-dim);
+      padding: 8px 20px;
+      cursor: pointer;
+      transition: all 0.15s;
+      text-transform: uppercase;
+    }
+
+    .btn:hover {
+      background: var(--green-faint);
+      border-color: var(--green);
+      box-shadow: var(--green-glow);
+    }
+
+    .btn:active {
+      background: rgba(0, 255, 65, 0.15);
+    }
+
+    .btn.primary {
+      border-color: var(--green);
+      box-shadow: 0 0 6px rgba(0, 255, 65, 0.3);
+    }
+
+    /* Difficulty selector */
+    .diff-row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+    }
+
+    .diff-label {
+      color: var(--green-dim);
+    }
+
+    .diff-btn {
+      font-family: inherit;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      color: var(--green-dim);
+      background: transparent;
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .diff-btn:hover,
+    .diff-btn.active {
+      color: var(--green);
+      border-color: var(--green-dim);
+      background: var(--green-faint);
+    }
+
+    .diff-btn.active {
+      box-shadow: 0 0 6px rgba(0, 255, 65, 0.25);
+    }
+
+    /* Result overlay */
+    #overlay {
+      display: none;
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 10;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+      text-align: center;
+    }
+
+    #overlay.show {
+      display: flex;
+    }
+
+    #overlay-msg {
+      font-size: 1.4rem;
+      letter-spacing: 0.3em;
+      text-shadow: var(--green-glow);
+      animation: flicker 3s infinite;
+    }
+
+    .overlay-sub {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      color: var(--green-dim);
+    }
+
+    footer {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      color: rgba(0, 255, 65, 0.25);
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="matrix"></canvas>
+
+<div class="container">
+  <header>
+    <div class="title">TIC-TAC-TOE</div>
+    <div class="subtitle">// NEURAL ADVERSARY ENGAGED //</div>
+  </header>
+
+  <div class="score-board">
+    <div class="score-item">
+      <div class="label">YOU</div>
+      <div class="val" id="score-player">0</div>
+    </div>
+    <div class="score-item">
+      <div class="label">DRAWS</div>
+      <div class="val" id="score-draw">0</div>
+    </div>
+    <div class="score-item">
+      <div class="label">BOT</div>
+      <div class="val" id="score-bot">0</div>
+    </div>
+  </div>
+
+  <div class="status-bar">
+    <span id="status-text">YOUR MOVE — PLACE X</span>
+  </div>
+
+  <div class="board-wrapper">
+    <div class="board" id="board">
+      <!-- 9 cells generated by JS -->
+    </div>
+    <div id="overlay">
+      <div id="overlay-msg"></div>
+      <div class="overlay-sub">[ PRESS ANY KEY OR CLICK ]</div>
+    </div>
+  </div>
+
+  <div class="diff-row">
+    <span class="diff-label">DIFFICULTY:</span>
+    <button class="diff-btn" data-diff="easy">EASY</button>
+    <button class="diff-btn active" data-diff="hard">HARD</button>
+  </div>
+
+  <div class="controls">
+    <button class="btn primary" id="btn-restart">[ RESTART ]</button>
+  </div>
+
+  <footer>SYS::GAME_ENGINE v1.0 &nbsp;|&nbsp; MINIMAX AI</footer>
+</div>
+
+<script>
+// ─── Matrix rain background ───────────────────────────────────────────────────
+(function () {
+  const canvas = document.getElementById('matrix');
+  const ctx = canvas.getContext('2d');
+  let cols, drops;
+
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    cols = Math.floor(canvas.width / 16);
+    drops = Array(cols).fill(1);
+  }
+
+  resize();
+  window.addEventListener('resize', resize);
+
+  function draw() {
+    ctx.fillStyle = 'rgba(0,0,0,0.05)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#00ff41';
+    ctx.font = '14px monospace';
+    drops.forEach((y, i) => {
+      const char = String.fromCharCode(0x30A0 + Math.random() * 96);
+      ctx.fillText(char, i * 16, y * 16);
+      if (y * 16 > canvas.height && Math.random() > 0.975) drops[i] = 0;
+      drops[i]++;
+    });
+  }
+
+  setInterval(draw, 50);
+})();
+
+// ─── Game logic ───────────────────────────────────────────────────────────────
+const EMPTY = null;
+const PLAYER = 'X';
+const BOT    = 'O';
+const WINS   = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+
+let board, gameOver, difficulty, scores;
+scores = { player: 0, draw: 0, bot: 0 };
+difficulty = 'hard';
+
+function checkWinner(b) {
+  for (const [a, c, d] of WINS) {
+    if (b[a] && b[a] === b[c] && b[a] === b[d]) return { winner: b[a], line: [a, c, d] };
+  }
+  if (b.every(c => c !== EMPTY)) return { winner: 'draw', line: [] };
+  return null;
+}
+
+// Minimax with alpha-beta pruning
+function minimax(b, isMax, alpha, beta, depth) {
+  const res = checkWinner(b);
+  if (res) {
+    if (res.winner === BOT)    return 10 - depth;
+    if (res.winner === PLAYER) return depth - 10;
+    return 0;
+  }
+
+  if (isMax) {
+    let best = -Infinity;
+    for (let i = 0; i < 9; i++) {
+      if (b[i] === EMPTY) {
+        b[i] = BOT;
+        best = Math.max(best, minimax(b, false, alpha, beta, depth + 1));
+        b[i] = EMPTY;
+        alpha = Math.max(alpha, best);
+        if (beta <= alpha) break;
+      }
+    }
+    return best;
+  } else {
+    let best = Infinity;
+    for (let i = 0; i < 9; i++) {
+      if (b[i] === EMPTY) {
+        b[i] = PLAYER;
+        best = Math.min(best, minimax(b, true, alpha, beta, depth + 1));
+        b[i] = EMPTY;
+        beta = Math.min(beta, best);
+        if (beta <= alpha) break;
+      }
+    }
+    return best;
+  }
+}
+
+function getBotMove(b) {
+  if (difficulty === 'easy') {
+    // 60% random, 40% smart
+    if (Math.random() < 0.6) {
+      const empty = b.map((v, i) => v === EMPTY ? i : -1).filter(i => i >= 0);
+      return empty[Math.floor(Math.random() * empty.length)];
+    }
+  }
+  let bestVal = -Infinity, bestMove = -1;
+  for (let i = 0; i < 9; i++) {
+    if (b[i] === EMPTY) {
+      b[i] = BOT;
+      const val = minimax(b, false, -Infinity, Infinity, 0);
+      b[i] = EMPTY;
+      if (val > bestVal) { bestVal = val; bestMove = i; }
+    }
+  }
+  return bestMove;
+}
+
+// ─── Rendering ────────────────────────────────────────────────────────────────
+const boardEl  = document.getElementById('board');
+const statusEl = document.getElementById('status-text');
+const overlay  = document.getElementById('overlay');
+const overlayMsg = document.getElementById('overlay-msg');
+
+function renderBoard() {
+  Array.from(boardEl.children).forEach((cell, i) => {
+    const val = board[i];
+    cell.className = 'cell' + (val ? ` ${val} taken` : '');
+    const mark = cell.querySelector('.mark');
+    mark.textContent = val || '';
+    // Trigger reflow for animation
+    void mark.offsetWidth;
+    if (val) mark.classList.add('show');
+    else mark.classList.remove('show');
+  });
+}
+
+function setStatus(msg) {
+  statusEl.style.opacity = 0;
+  setTimeout(() => { statusEl.textContent = msg; statusEl.style.opacity = 1; }, 150);
+}
+
+function showOverlay(msg) {
+  overlayMsg.textContent = msg;
+  overlay.classList.add('show');
+}
+
+function updateScores() {
+  document.getElementById('score-player').textContent = scores.player;
+  document.getElementById('score-draw').textContent   = scores.draw;
+  document.getElementById('score-bot').textContent    = scores.bot;
+}
+
+// ─── Init ─────────────────────────────────────────────────────────────────────
+function initGame() {
+  board = Array(9).fill(EMPTY);
+  gameOver = false;
+  overlay.classList.remove('show');
+  setStatus('YOUR MOVE — PLACE X');
+  renderBoard();
+}
+
+function buildBoard() {
+  boardEl.innerHTML = '';
+  for (let i = 0; i < 9; i++) {
+    const cell = document.createElement('div');
+    cell.className = 'cell';
+    cell.dataset.index = i;
+    const mark = document.createElement('span');
+    mark.className = 'mark';
+    cell.appendChild(mark);
+    cell.addEventListener('click', () => onCellClick(i));
+    boardEl.appendChild(cell);
+  }
+}
+
+// ─── Interaction ──────────────────────────────────────────────────────────────
+function onCellClick(i) {
+  if (gameOver || board[i] !== EMPTY) return;
+  board[i] = PLAYER;
+  renderBoard();
+
+  const res = checkWinner(board);
+  if (res) { endGame(res); return; }
+
+  setStatus('BOT COMPUTING...');
+  gameOver = true; // block player during bot turn
+
+  setTimeout(() => {
+    const move = getBotMove(board);
+    if (move !== -1) board[move] = BOT;
+    renderBoard();
+    gameOver = false;
+
+    const res2 = checkWinner(board);
+    if (res2) { endGame(res2); return; }
+
+    setStatus('YOUR MOVE — PLACE X');
+  }, 350 + Math.random() * 250);
+}
+
+function endGame(res) {
+  gameOver = true;
+  const cells = Array.from(boardEl.children);
+
+  if (res.winner === 'draw') {
+    scores.draw++;
+    setStatus('DRAW — SYSTEM TIE');
+    showOverlay('[ DRAW ]');
+  } else {
+    res.line.forEach(i => cells[i].classList.add('win-cell'));
+    if (res.winner === PLAYER) {
+      scores.player++;
+      setStatus('YOU WIN — SYSTEM BREACH');
+      showOverlay('[ ACCESS GRANTED ]');
+    } else {
+      scores.bot++;
+      setStatus('BOT WINS — ACCESS DENIED');
+      showOverlay('[ ACCESS DENIED ]');
+    }
+  }
+  updateScores();
+}
+
+// Restart on overlay click or any key
+overlay.addEventListener('click', initGame);
+document.addEventListener('keydown', e => { if (overlay.classList.contains('show')) initGame(); });
+document.getElementById('btn-restart').addEventListener('click', initGame);
+
+// Difficulty buttons
+document.querySelectorAll('.diff-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    difficulty = btn.dataset.diff;
+    document.querySelectorAll('.diff-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    initGame();
+  });
+});
+
+buildBoard();
+initGame();
+updateScores();
+</script>
+</body>
+</html>
