@@ -1,0 +1,38 @@
+{
+  "companySlug": "seek",
+  "lastUpdated": "2025-04-14T00:00:00Z",
+  "events": [
+    {
+      "id": "seek-h1fy2025",
+      "companySlug": "seek",
+      "companyName": "SEEK Limited",
+      "ticker": "SEK",
+      "exchange": "ASX",
+      "periodLabel": "H1 FY2025",
+      "announcedDate": "2025-02-19",
+      "status": "reported",
+      "revenueActual": 560,
+      "reportUrl": "https://ir.seek.com.au"
+    },
+    {
+      "id": "seek-fy2025",
+      "companySlug": "seek",
+      "companyName": "SEEK Limited",
+      "ticker": "SEK",
+      "exchange": "ASX",
+      "periodLabel": "FY2025",
+      "announcedDate": "2025-08-20",
+      "status": "estimated"
+    },
+    {
+      "id": "seek-h1fy2026",
+      "companySlug": "seek",
+      "companyName": "SEEK Limited",
+      "ticker": "SEK",
+      "exchange": "ASX",
+      "periodLabel": "H1 FY2026",
+      "announcedDate": "2026-02-18",
+      "status": "estimated"
+    }
+  ]
+}

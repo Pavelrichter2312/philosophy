@@ -1,0 +1,37 @@
+{
+  "companySlug": "infoedge",
+  "lastUpdated": "2025-04-14T00:00:00Z",
+  "events": [
+    {
+      "id": "infoedge-q32025",
+      "companySlug": "infoedge",
+      "companyName": "Info Edge (India) Limited",
+      "ticker": "NAUKRI",
+      "exchange": "NSE",
+      "periodLabel": "Q3 FY2025",
+      "announcedDate": "2025-01-22",
+      "status": "reported",
+      "revenueActual": 6800
+    },
+    {
+      "id": "infoedge-q4fy2025",
+      "companySlug": "infoedge",
+      "companyName": "Info Edge (India) Limited",
+      "ticker": "NAUKRI",
+      "exchange": "NSE",
+      "periodLabel": "Q4 FY2025",
+      "announcedDate": "2025-05-12",
+      "status": "estimated"
+    },
+    {
+      "id": "infoedge-q1fy2026",
+      "companySlug": "infoedge",
+      "companyName": "Info Edge (India) Limited",
+      "ticker": "NAUKRI",
+      "exchange": "NSE",
+      "periodLabel": "Q1 FY2026",
+      "announcedDate": "2025-07-23",
+      "status": "estimated"
+    }
+  ]
+}

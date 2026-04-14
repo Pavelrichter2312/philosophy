@@ -1,0 +1,124 @@
+{
+  "companySlug": "infoedge",
+  "lastScraped": "2025-01-01T00:00:00Z",
+  "periods": [
+    {
+      "period": {
+        "companySlug": "infoedge",
+        "periodType": "annual",
+        "fiscalYear": 2025,
+        "periodLabel": "FY2025",
+        "startDate": "2024-04-01",
+        "endDate": "2025-03-31",
+        "reportDate": "2025-05-12",
+        "currency": "INR",
+        "unit": "millions",
+        "source": "Info Edge FY2025 Annual Results"
+      },
+      "incomeStatement": {
+        "revenue": 26800,
+        "revenueGrowthYoY": 0.15,
+        "grossProfit": 22300,
+        "grossMargin": 0.832,
+        "ebitda": 11200,
+        "ebitdaMargin": 0.418,
+        "operatingIncome": 9800,
+        "operatingMargin": 0.366,
+        "netIncome": 8500,
+        "netMargin": 0.317,
+        "eps": 68.5,
+        "epsDiluted": 68.0,
+        "sharesBasic": 124.1,
+        "sharesDiluted": 125.0
+      },
+      "balanceSheet": {
+        "cashAndEquivalents": 15000,
+        "shortTermInvestments": 35000,
+        "totalCurrentAssets": 56000,
+        "totalNonCurrentAssets": 48000,
+        "totalAssets": 104000,
+        "totalCurrentLiabilities": 12000,
+        "totalNonCurrentLiabilities": 6000,
+        "totalLiabilities": 18000,
+        "totalEquity": 86000,
+        "totalLiabilitiesAndEquity": 104000
+      },
+      "cashFlow": {
+        "operatingCashFlow": 10200,
+        "capitalExpenditures": 800,
+        "freeCashFlow": 9400,
+        "investingCashFlow": -12000,
+        "financingCashFlow": -1500,
+        "netChangeInCash": -3300
+      },
+      "platformMetrics": {
+        "paidClientsOrSubscribers": 78000,
+        "paidClientsGrowthYoY": 0.12,
+        "arpuValue": 343590,
+        "arpuLabel": "Naukri revenue per paid customer (INR, annualised)",
+        "arpuGrowthYoY": 0.03,
+        "additionalMetrics": {
+          "naukriRevenueShare": "0.74",
+          "cvDatabaseSizeMillions": "100"
+        }
+      }
+    },
+    {
+      "period": {
+        "companySlug": "infoedge",
+        "periodType": "annual",
+        "fiscalYear": 2024,
+        "periodLabel": "FY2024",
+        "startDate": "2023-04-01",
+        "endDate": "2024-03-31",
+        "reportDate": "2024-05-10",
+        "currency": "INR",
+        "unit": "millions",
+        "source": "Info Edge FY2024 Annual Results"
+      },
+      "incomeStatement": {
+        "revenue": 23300,
+        "revenueGrowthYoY": 0.15,
+        "grossProfit": 19400,
+        "grossMargin": 0.833,
+        "ebitda": 9600,
+        "ebitdaMargin": 0.412,
+        "operatingIncome": 8300,
+        "operatingMargin": 0.356,
+        "netIncome": 7200,
+        "netMargin": 0.309,
+        "eps": 58.1,
+        "epsDiluted": 57.7,
+        "sharesBasic": 123.9,
+        "sharesDiluted": 124.8
+      },
+      "balanceSheet": {
+        "cashAndEquivalents": 18300,
+        "shortTermInvestments": 32000,
+        "totalCurrentAssets": 56300,
+        "totalNonCurrentAssets": 42000,
+        "totalAssets": 98300,
+        "totalCurrentLiabilities": 10500,
+        "totalNonCurrentLiabilities": 5500,
+        "totalLiabilities": 16000,
+        "totalEquity": 82300,
+        "totalLiabilitiesAndEquity": 98300
+      },
+      "cashFlow": {
+        "operatingCashFlow": 9000,
+        "capitalExpenditures": 700,
+        "freeCashFlow": 8300,
+        "investingCashFlow": -10500,
+        "financingCashFlow": -1200,
+        "netChangeInCash": -2700
+      },
+      "platformMetrics": {
+        "paidClientsOrSubscribers": 69600,
+        "paidClientsGrowthYoY": 0.10,
+        "arpuValue": 333620,
+        "arpuLabel": "Naukri revenue per paid customer (INR, annualised)",
+        "arpuGrowthYoY": 0.05
+      }
+    }
+  ]
+}

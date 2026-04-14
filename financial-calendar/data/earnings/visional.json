@@ -1,0 +1,27 @@
+{
+  "companySlug": "visional",
+  "lastUpdated": "2025-04-14T00:00:00Z",
+  "events": [
+    {
+      "id": "visional-q22025",
+      "companySlug": "visional",
+      "companyName": "Visional, Inc.",
+      "ticker": "4194",
+      "exchange": "TSE",
+      "periodLabel": "Q2 FY2025",
+      "announcedDate": "2025-03-14",
+      "status": "reported",
+      "revenueActual": 14200
+    },
+    {
+      "id": "visional-fy2025",
+      "companySlug": "visional",
+      "companyName": "Visional, Inc.",
+      "ticker": "4194",
+      "exchange": "TSE",
+      "periodLabel": "FY2025",
+      "announcedDate": "2025-09-11",
+      "status": "estimated"
+    }
+  ]
+}

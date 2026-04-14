@@ -1,0 +1,29 @@
+{
+  "companySlug": "pracuji",
+  "lastUpdated": "2025-04-14T00:00:00Z",
+  "events": [
+    {
+      "id": "pracuji-fy2023",
+      "companySlug": "pracuji",
+      "companyName": "Pracuji.cz s.r.o.",
+      "ticker": "",
+      "exchange": "PRIVATE",
+      "periodLabel": "FY2023",
+      "announcedDate": "2024-06-30",
+      "status": "reported",
+      "revenueActual": 148000,
+      "notes": "Czech statutory accounts filed with OR.justice.cz"
+    },
+    {
+      "id": "pracuji-fy2024",
+      "companySlug": "pracuji",
+      "companyName": "Pracuji.cz s.r.o.",
+      "ticker": "",
+      "exchange": "PRIVATE",
+      "periodLabel": "FY2024",
+      "announcedDate": "2025-06-30",
+      "status": "estimated",
+      "notes": "Expected filing deadline"
+    }
+  ]
+}

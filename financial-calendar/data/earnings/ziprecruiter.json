@@ -1,0 +1,49 @@
+{
+  "companySlug": "ziprecruiter",
+  "lastUpdated": "2025-04-14T00:00:00Z",
+  "events": [
+    {
+      "id": "ziprecruiter-q42024",
+      "companySlug": "ziprecruiter",
+      "companyName": "ZipRecruiter, Inc.",
+      "ticker": "ZIP",
+      "exchange": "NASDAQ",
+      "periodLabel": "Q4 FY2024",
+      "announcedDate": "2025-02-19",
+      "status": "reported",
+      "revenueActual": 83000,
+      "epsActual": -0.12
+    },
+    {
+      "id": "ziprecruiter-q12025",
+      "companySlug": "ziprecruiter",
+      "companyName": "ZipRecruiter, Inc.",
+      "ticker": "ZIP",
+      "exchange": "NASDAQ",
+      "periodLabel": "Q1 FY2025",
+      "announcedDate": "2025-05-07",
+      "status": "estimated",
+      "revenueEstimate": 78000
+    },
+    {
+      "id": "ziprecruiter-q22025",
+      "companySlug": "ziprecruiter",
+      "companyName": "ZipRecruiter, Inc.",
+      "ticker": "ZIP",
+      "exchange": "NASDAQ",
+      "periodLabel": "Q2 FY2025",
+      "announcedDate": "2025-08-06",
+      "status": "estimated"
+    },
+    {
+      "id": "ziprecruiter-q32025",
+      "companySlug": "ziprecruiter",
+      "companyName": "ZipRecruiter, Inc.",
+      "ticker": "ZIP",
+      "exchange": "NASDAQ",
+      "periodLabel": "Q3 FY2025",
+      "announcedDate": "2025-11-05",
+      "status": "estimated"
+    }
+  ]
+}

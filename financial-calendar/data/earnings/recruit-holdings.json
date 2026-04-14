@@ -1,0 +1,37 @@
+{
+  "companySlug": "recruit-holdings",
+  "lastUpdated": "2025-04-14T00:00:00Z",
+  "events": [
+    {
+      "id": "recruit-holdings-q32025",
+      "companySlug": "recruit-holdings",
+      "companyName": "Recruit Holdings Co., Ltd.",
+      "ticker": "6098",
+      "exchange": "TSE",
+      "periodLabel": "Q3 FY2025",
+      "announcedDate": "2025-02-13",
+      "status": "reported",
+      "revenueActual": 951000
+    },
+    {
+      "id": "recruit-holdings-fy2025",
+      "companySlug": "recruit-holdings",
+      "companyName": "Recruit Holdings Co., Ltd.",
+      "ticker": "6098",
+      "exchange": "TSE",
+      "periodLabel": "FY2025",
+      "announcedDate": "2025-05-13",
+      "status": "estimated"
+    },
+    {
+      "id": "recruit-holdings-q12026",
+      "companySlug": "recruit-holdings",
+      "companyName": "Recruit Holdings Co., Ltd.",
+      "ticker": "6098",
+      "exchange": "TSE",
+      "periodLabel": "Q1 FY2026",
+      "announcedDate": "2025-08-14",
+      "status": "estimated"
+    }
+  ]
+}

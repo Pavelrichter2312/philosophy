@@ -1,0 +1,49 @@
+{
+  "companySlug": "kanzhun",
+  "lastUpdated": "2025-04-14T00:00:00Z",
+  "events": [
+    {
+      "id": "kanzhun-q42024",
+      "companySlug": "kanzhun",
+      "companyName": "Kanzhun Limited",
+      "ticker": "BZ",
+      "exchange": "NASDAQ",
+      "periodLabel": "Q4 FY2024",
+      "announcedDate": "2025-03-18",
+      "status": "reported",
+      "revenueActual": 2105,
+      "epsActual": 0.54
+    },
+    {
+      "id": "kanzhun-q12025",
+      "companySlug": "kanzhun",
+      "companyName": "Kanzhun Limited",
+      "ticker": "BZ",
+      "exchange": "NASDAQ",
+      "periodLabel": "Q1 FY2025",
+      "announcedDate": "2025-05-22",
+      "status": "estimated",
+      "revenueEstimate": 1960
+    },
+    {
+      "id": "kanzhun-q22025",
+      "companySlug": "kanzhun",
+      "companyName": "Kanzhun Limited",
+      "ticker": "BZ",
+      "exchange": "NASDAQ",
+      "periodLabel": "Q2 FY2025",
+      "announcedDate": "2025-08-21",
+      "status": "estimated"
+    },
+    {
+      "id": "kanzhun-q32025",
+      "companySlug": "kanzhun",
+      "companyName": "Kanzhun Limited",
+      "ticker": "BZ",
+      "exchange": "NASDAQ",
+      "periodLabel": "Q3 FY2025",
+      "announcedDate": "2025-11-20",
+      "status": "estimated"
+    }
+  ]
+}

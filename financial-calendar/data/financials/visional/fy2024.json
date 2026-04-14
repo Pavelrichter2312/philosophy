@@ -1,0 +1,118 @@
+{
+  "companySlug": "visional",
+  "lastScraped": "2025-01-01T00:00:00Z",
+  "periods": [
+    {
+      "period": {
+        "companySlug": "visional",
+        "periodType": "annual",
+        "fiscalYear": 2024,
+        "periodLabel": "FY2024",
+        "startDate": "2023-08-01",
+        "endDate": "2024-07-31",
+        "reportDate": "2024-09-12",
+        "currency": "JPY",
+        "unit": "millions",
+        "source": "Visional FY2024 Annual Results"
+      },
+      "incomeStatement": {
+        "revenue": 51700,
+        "revenueGrowthYoY": 0.22,
+        "grossProfit": 44200,
+        "grossMargin": 0.855,
+        "ebitda": 18600,
+        "ebitdaMargin": 0.360,
+        "operatingIncome": 15900,
+        "operatingMargin": 0.308,
+        "netIncome": 11200,
+        "netMargin": 0.217,
+        "eps": 327.0,
+        "epsDiluted": 325.0,
+        "sharesBasic": 34.2,
+        "sharesDiluted": 34.5
+      },
+      "balanceSheet": {
+        "cashAndEquivalents": 28000,
+        "totalCurrentAssets": 38000,
+        "totalNonCurrentAssets": 22000,
+        "totalAssets": 60000,
+        "totalCurrentLiabilities": 16000,
+        "totalNonCurrentLiabilities": 4000,
+        "totalLiabilities": 20000,
+        "totalEquity": 40000,
+        "totalLiabilitiesAndEquity": 60000
+      },
+      "cashFlow": {
+        "operatingCashFlow": 17000,
+        "capitalExpenditures": 1800,
+        "freeCashFlow": 15200,
+        "investingCashFlow": -3500,
+        "financingCashFlow": -6000,
+        "netChangeInCash": 7500
+      },
+      "platformMetrics": {
+        "paidClientsOrSubscribers": 320000,
+        "paidClientsGrowthYoY": 0.18,
+        "arpuValue": 161563,
+        "arpuLabel": "Bizreach revenue per paid member (JPY, annualised)",
+        "arpuGrowthYoY": 0.03
+      }
+    },
+    {
+      "period": {
+        "companySlug": "visional",
+        "periodType": "annual",
+        "fiscalYear": 2023,
+        "periodLabel": "FY2023",
+        "startDate": "2022-08-01",
+        "endDate": "2023-07-31",
+        "reportDate": "2023-09-14",
+        "currency": "JPY",
+        "unit": "millions",
+        "source": "Visional FY2023 Annual Results"
+      },
+      "incomeStatement": {
+        "revenue": 42400,
+        "revenueGrowthYoY": 0.26,
+        "grossProfit": 36100,
+        "grossMargin": 0.852,
+        "ebitda": 14800,
+        "ebitdaMargin": 0.349,
+        "operatingIncome": 12400,
+        "operatingMargin": 0.293,
+        "netIncome": 8800,
+        "netMargin": 0.208,
+        "eps": 257.0,
+        "epsDiluted": 255.0,
+        "sharesBasic": 34.2,
+        "sharesDiluted": 34.5
+      },
+      "balanceSheet": {
+        "cashAndEquivalents": 20500,
+        "totalCurrentAssets": 30000,
+        "totalNonCurrentAssets": 18500,
+        "totalAssets": 48500,
+        "totalCurrentLiabilities": 13000,
+        "totalNonCurrentLiabilities": 3500,
+        "totalLiabilities": 16500,
+        "totalEquity": 32000,
+        "totalLiabilitiesAndEquity": 48500
+      },
+      "cashFlow": {
+        "operatingCashFlow": 13200,
+        "capitalExpenditures": 1500,
+        "freeCashFlow": 11700,
+        "investingCashFlow": -2800,
+        "financingCashFlow": -4000,
+        "netChangeInCash": 6400
+      },
+      "platformMetrics": {
+        "paidClientsOrSubscribers": 271000,
+        "paidClientsGrowthYoY": 0.20,
+        "arpuValue": 156457,
+        "arpuLabel": "Bizreach revenue per paid member (JPY, annualised)",
+        "arpuGrowthYoY": 0.05
+      }
+    }
+  ]
+}

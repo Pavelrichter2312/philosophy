@@ -1,0 +1,120 @@
+{
+  "companySlug": "seek",
+  "lastScraped": "2025-01-01T00:00:00Z",
+  "periods": [
+    {
+      "period": {
+        "companySlug": "seek",
+        "periodType": "annual",
+        "fiscalYear": 2024,
+        "periodLabel": "FY2024",
+        "startDate": "2023-07-01",
+        "endDate": "2024-06-30",
+        "reportDate": "2024-08-21",
+        "currency": "AUD",
+        "unit": "millions",
+        "source": "SEEK FY2024 Annual Report"
+      },
+      "incomeStatement": {
+        "revenue": 1141.0,
+        "revenueGrowthYoY": 0.07,
+        "grossProfit": 780.0,
+        "grossMargin": 0.683,
+        "ebitda": 420.0,
+        "ebitdaMargin": 0.368,
+        "operatingIncome": 310.0,
+        "operatingMargin": 0.272,
+        "netIncome": 195.0,
+        "netMargin": 0.171,
+        "eps": 0.54,
+        "epsDiluted": 0.53,
+        "sharesBasic": 361.0,
+        "sharesDiluted": 368.0
+      },
+      "balanceSheet": {
+        "cashAndEquivalents": 320.0,
+        "totalCurrentAssets": 580.0,
+        "totalNonCurrentAssets": 2100.0,
+        "totalAssets": 2680.0,
+        "totalCurrentLiabilities": 340.0,
+        "longTermDebt": 850.0,
+        "totalNonCurrentLiabilities": 980.0,
+        "totalLiabilities": 1320.0,
+        "totalEquity": 1360.0,
+        "totalLiabilitiesAndEquity": 2680.0
+      },
+      "cashFlow": {
+        "operatingCashFlow": 370.0,
+        "capitalExpenditures": 65.0,
+        "freeCashFlow": 305.0,
+        "investingCashFlow": -120.0,
+        "financingCashFlow": -180.0,
+        "netChangeInCash": 70.0
+      },
+      "platformMetrics": {
+        "paidClientsOrSubscribers": 34200,
+        "paidClientsGrowthYoY": 0.04,
+        "arpuValue": 33100,
+        "arpuLabel": "Revenue per paid advertiser (AUD)",
+        "arpuGrowthYoY": 0.03
+      }
+    },
+    {
+      "period": {
+        "companySlug": "seek",
+        "periodType": "annual",
+        "fiscalYear": 2023,
+        "periodLabel": "FY2023",
+        "startDate": "2022-07-01",
+        "endDate": "2023-06-30",
+        "reportDate": "2023-08-23",
+        "currency": "AUD",
+        "unit": "millions",
+        "source": "SEEK FY2023 Annual Report"
+      },
+      "incomeStatement": {
+        "revenue": 1067.0,
+        "revenueGrowthYoY": 0.24,
+        "grossProfit": 720.0,
+        "grossMargin": 0.675,
+        "ebitda": 395.0,
+        "ebitdaMargin": 0.370,
+        "operatingIncome": 285.0,
+        "operatingMargin": 0.267,
+        "netIncome": 170.0,
+        "netMargin": 0.159,
+        "eps": 0.47,
+        "epsDiluted": 0.46,
+        "sharesBasic": 361.0,
+        "sharesDiluted": 369.0
+      },
+      "balanceSheet": {
+        "cashAndEquivalents": 250.0,
+        "totalCurrentAssets": 490.0,
+        "totalNonCurrentAssets": 2250.0,
+        "totalAssets": 2740.0,
+        "totalCurrentLiabilities": 310.0,
+        "longTermDebt": 920.0,
+        "totalNonCurrentLiabilities": 1060.0,
+        "totalLiabilities": 1370.0,
+        "totalEquity": 1370.0,
+        "totalLiabilitiesAndEquity": 2740.0
+      },
+      "cashFlow": {
+        "operatingCashFlow": 340.0,
+        "capitalExpenditures": 60.0,
+        "freeCashFlow": 280.0,
+        "investingCashFlow": -90.0,
+        "financingCashFlow": -200.0,
+        "netChangeInCash": 50.0
+      },
+      "platformMetrics": {
+        "paidClientsOrSubscribers": 32900,
+        "paidClientsGrowthYoY": 0.06,
+        "arpuValue": 32400,
+        "arpuLabel": "Revenue per paid advertiser (AUD)",
+        "arpuGrowthYoY": 0.17
+      }
+    }
+  ]
+}

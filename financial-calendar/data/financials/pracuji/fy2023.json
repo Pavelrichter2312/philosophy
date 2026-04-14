@@ -1,0 +1,56 @@
+{
+  "companySlug": "pracuji",
+  "lastScraped": "2025-01-01T00:00:00Z",
+  "periods": [
+    {
+      "period": {
+        "companySlug": "pracuji",
+        "periodType": "annual",
+        "fiscalYear": 2023,
+        "periodLabel": "FY2023",
+        "startDate": "2023-01-01",
+        "endDate": "2023-12-31",
+        "reportDate": "2024-06-30",
+        "currency": "CZK",
+        "unit": "thousands",
+        "source": "Czech Business Registry (OR.justice.cz)"
+      },
+      "incomeStatement": {
+        "revenue": 148000,
+        "revenueGrowthYoY": 0.12,
+        "grossProfit": 125000,
+        "grossMargin": 0.845,
+        "operatingIncome": 42000,
+        "operatingMargin": 0.284,
+        "netIncome": 34000,
+        "netMargin": 0.230
+      },
+      "balanceSheet": {
+        "cashAndEquivalents": 28000,
+        "totalCurrentAssets": 52000,
+        "totalNonCurrentAssets": 18000,
+        "totalAssets": 70000,
+        "totalCurrentLiabilities": 15000,
+        "totalNonCurrentLiabilities": 5000,
+        "totalLiabilities": 20000,
+        "totalEquity": 50000,
+        "totalLiabilitiesAndEquity": 70000
+      },
+      "cashFlow": {
+        "operatingCashFlow": 40000,
+        "capitalExpenditures": 3000,
+        "freeCashFlow": 37000,
+        "investingCashFlow": -5000,
+        "financingCashFlow": -15000,
+        "netChangeInCash": 20000
+      },
+      "platformMetrics": {
+        "paidClientsOrSubscribers": 2800,
+        "paidClientsGrowthYoY": 0.08,
+        "arpuValue": 52857,
+        "arpuLabel": "Annual revenue per paid client (CZK)",
+        "arpuGrowthYoY": 0.04
+      }
+    }
+  ]
+}

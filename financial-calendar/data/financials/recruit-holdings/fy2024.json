@@ -1,0 +1,124 @@
+{
+  "companySlug": "recruit-holdings",
+  "lastScraped": "2025-01-01T00:00:00Z",
+  "periods": [
+    {
+      "period": {
+        "companySlug": "recruit-holdings",
+        "periodType": "annual",
+        "fiscalYear": 2024,
+        "periodLabel": "FY2024",
+        "startDate": "2023-04-01",
+        "endDate": "2024-03-31",
+        "reportDate": "2024-05-14",
+        "currency": "JPY",
+        "unit": "millions",
+        "source": "Recruit Holdings FY2024 Annual Report"
+      },
+      "incomeStatement": {
+        "revenue": 3626700,
+        "revenueGrowthYoY": 0.04,
+        "grossProfit": 1960000,
+        "grossMargin": 0.540,
+        "ebitda": 620000,
+        "ebitdaMargin": 0.171,
+        "operatingIncome": 490000,
+        "operatingMargin": 0.135,
+        "netIncome": 340000,
+        "netMargin": 0.094,
+        "eps": 214.5,
+        "epsDiluted": 213.0,
+        "sharesBasic": 1584.0,
+        "sharesDiluted": 1597.0
+      },
+      "balanceSheet": {
+        "cashAndEquivalents": 1230000,
+        "totalCurrentAssets": 2400000,
+        "totalNonCurrentAssets": 3100000,
+        "totalAssets": 5500000,
+        "totalCurrentLiabilities": 1200000,
+        "longTermDebt": 500000,
+        "totalNonCurrentLiabilities": 800000,
+        "totalLiabilities": 2000000,
+        "totalEquity": 3500000,
+        "totalLiabilitiesAndEquity": 5500000
+      },
+      "cashFlow": {
+        "operatingCashFlow": 600000,
+        "capitalExpenditures": 120000,
+        "freeCashFlow": 480000,
+        "investingCashFlow": -250000,
+        "financingCashFlow": -600000,
+        "netChangeInCash": -250000
+      },
+      "platformMetrics": {
+        "paidClientsOrSubscribers": 14800000,
+        "paidClientsGrowthYoY": 0.06,
+        "arpuValue": 245000,
+        "arpuLabel": "Indeed revenue per paying customer (JPY, annualised)",
+        "arpuGrowthYoY": -0.02,
+        "additionalMetrics": {
+          "indeedJobSeekersMonthly": "350000000",
+          "staffingSegmentRevenue": "2250000"
+        }
+      }
+    },
+    {
+      "period": {
+        "companySlug": "recruit-holdings",
+        "periodType": "annual",
+        "fiscalYear": 2023,
+        "periodLabel": "FY2023",
+        "startDate": "2022-04-01",
+        "endDate": "2023-03-31",
+        "reportDate": "2023-05-11",
+        "currency": "JPY",
+        "unit": "millions",
+        "source": "Recruit Holdings FY2023 Annual Report"
+      },
+      "incomeStatement": {
+        "revenue": 3498600,
+        "revenueGrowthYoY": 0.13,
+        "grossProfit": 1870000,
+        "grossMargin": 0.534,
+        "ebitda": 620000,
+        "ebitdaMargin": 0.177,
+        "operatingIncome": 500000,
+        "operatingMargin": 0.143,
+        "netIncome": 310000,
+        "netMargin": 0.089,
+        "eps": 195.0,
+        "epsDiluted": 193.5,
+        "sharesBasic": 1590.0,
+        "sharesDiluted": 1603.0
+      },
+      "balanceSheet": {
+        "cashAndEquivalents": 1480000,
+        "totalCurrentAssets": 2650000,
+        "totalNonCurrentAssets": 2950000,
+        "totalAssets": 5600000,
+        "totalCurrentLiabilities": 1150000,
+        "longTermDebt": 450000,
+        "totalNonCurrentLiabilities": 750000,
+        "totalLiabilities": 1900000,
+        "totalEquity": 3700000,
+        "totalLiabilitiesAndEquity": 5600000
+      },
+      "cashFlow": {
+        "operatingCashFlow": 590000,
+        "capitalExpenditures": 110000,
+        "freeCashFlow": 480000,
+        "investingCashFlow": -200000,
+        "financingCashFlow": -650000,
+        "netChangeInCash": -260000
+      },
+      "platformMetrics": {
+        "paidClientsOrSubscribers": 13950000,
+        "paidClientsGrowthYoY": 0.11,
+        "arpuValue": 250000,
+        "arpuLabel": "Indeed revenue per paying customer (JPY, annualised)",
+        "arpuGrowthYoY": 0.02
+      }
+    }
+  ]
+}

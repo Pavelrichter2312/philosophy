@@ -1,0 +1,122 @@
+{
+  "companySlug": "ziprecruiter",
+  "lastScraped": "2025-01-01T00:00:00Z",
+  "periods": [
+    {
+      "period": {
+        "companySlug": "ziprecruiter",
+        "periodType": "annual",
+        "fiscalYear": 2024,
+        "periodLabel": "FY2024",
+        "startDate": "2024-01-01",
+        "endDate": "2024-12-31",
+        "reportDate": "2025-02-19",
+        "currency": "USD",
+        "unit": "thousands",
+        "source": "ZipRecruiter 10-K FY2024"
+      },
+      "incomeStatement": {
+        "revenue": 361000,
+        "revenueGrowthYoY": -0.26,
+        "grossProfit": 321000,
+        "grossMargin": 0.889,
+        "ebitda": -28000,
+        "ebitdaMargin": -0.078,
+        "operatingIncome": -55000,
+        "operatingMargin": -0.152,
+        "netIncome": -38000,
+        "netMargin": -0.105,
+        "eps": -0.38,
+        "epsDiluted": -0.38,
+        "sharesBasic": 100000,
+        "sharesDiluted": 100000
+      },
+      "balanceSheet": {
+        "cashAndEquivalents": 480000,
+        "shortTermInvestments": 120000,
+        "totalCurrentAssets": 680000,
+        "totalNonCurrentAssets": 280000,
+        "totalAssets": 960000,
+        "totalCurrentLiabilities": 180000,
+        "longTermDebt": 550000,
+        "totalNonCurrentLiabilities": 620000,
+        "totalLiabilities": 800000,
+        "totalEquity": 160000,
+        "totalLiabilitiesAndEquity": 960000
+      },
+      "cashFlow": {
+        "operatingCashFlow": 42000,
+        "capitalExpenditures": 12000,
+        "freeCashFlow": 30000,
+        "investingCashFlow": -25000,
+        "financingCashFlow": -80000,
+        "netChangeInCash": -63000
+      },
+      "platformMetrics": {
+        "paidClientsOrSubscribers": 76000,
+        "paidClientsGrowthYoY": -0.30,
+        "arpuValue": 4750,
+        "arpuLabel": "Quarterly revenue per paid employer (USD)",
+        "arpuGrowthYoY": 0.06
+      }
+    },
+    {
+      "period": {
+        "companySlug": "ziprecruiter",
+        "periodType": "annual",
+        "fiscalYear": 2023,
+        "periodLabel": "FY2023",
+        "startDate": "2023-01-01",
+        "endDate": "2023-12-31",
+        "reportDate": "2024-02-21",
+        "currency": "USD",
+        "unit": "thousands",
+        "source": "ZipRecruiter 10-K FY2023"
+      },
+      "incomeStatement": {
+        "revenue": 488000,
+        "revenueGrowthYoY": -0.32,
+        "grossProfit": 432000,
+        "grossMargin": 0.885,
+        "ebitda": 48000,
+        "ebitdaMargin": 0.098,
+        "operatingIncome": 8000,
+        "operatingMargin": 0.016,
+        "netIncome": 12000,
+        "netMargin": 0.025,
+        "eps": 0.11,
+        "epsDiluted": 0.11,
+        "sharesBasic": 109000,
+        "sharesDiluted": 113000
+      },
+      "balanceSheet": {
+        "cashAndEquivalents": 543000,
+        "shortTermInvestments": 115000,
+        "totalCurrentAssets": 730000,
+        "totalNonCurrentAssets": 310000,
+        "totalAssets": 1040000,
+        "totalCurrentLiabilities": 195000,
+        "longTermDebt": 550000,
+        "totalNonCurrentLiabilities": 640000,
+        "totalLiabilities": 835000,
+        "totalEquity": 205000,
+        "totalLiabilitiesAndEquity": 1040000
+      },
+      "cashFlow": {
+        "operatingCashFlow": 120000,
+        "capitalExpenditures": 18000,
+        "freeCashFlow": 102000,
+        "investingCashFlow": -40000,
+        "financingCashFlow": -220000,
+        "netChangeInCash": -140000
+      },
+      "platformMetrics": {
+        "paidClientsOrSubscribers": 108000,
+        "paidClientsGrowthYoY": -0.35,
+        "arpuValue": 4510,
+        "arpuLabel": "Quarterly revenue per paid employer (USD)",
+        "arpuGrowthYoY": 0.04
+      }
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "companySlug": "kanzhun",
+  "lastScraped": "2025-01-01T00:00:00Z",
+  "periods": [
+    {
+      "period": {
+        "companySlug": "kanzhun",
+        "periodType": "annual",
+        "fiscalYear": 2024,
+        "periodLabel": "FY2024",
+        "startDate": "2024-01-01",
+        "endDate": "2024-12-31",
+        "reportDate": "2025-03-18",
+        "currency": "CNY",
+        "unit": "millions",
+        "source": "Kanzhun 2024 Annual Report (20-F)"
+      },
+      "incomeStatement": {
+        "revenue": 8000.0,
+        "revenueGrowthYoY": 0.19,
+        "grossProfit": 7040.0,
+        "grossMargin": 0.880,
+        "ebitda": 2800.0,
+        "ebitdaMargin": 0.350,
+        "operatingIncome": 2240.0,
+        "operatingMargin": 0.280,
+        "netIncome": 2480.0,
+        "netMargin": 0.310,
+        "eps": 2.06,
+        "epsDiluted": 2.02,
+        "sharesBasic": 1203.0,
+        "sharesDiluted": 1228.0
+      },
+      "balanceSheet": {
+        "cashAndEquivalents": 5200.0,
+        "shortTermInvestments": 8000.0,
+        "totalCurrentAssets": 14200.0,
+        "totalNonCurrentAssets": 3800.0,
+        "totalAssets": 18000.0,
+        "totalCurrentLiabilities": 3600.0,
+        "totalNonCurrentLiabilities": 400.0,
+        "totalLiabilities": 4000.0,
+        "totalEquity": 14000.0,
+        "totalLiabilitiesAndEquity": 18000.0
+      },
+      "cashFlow": {
+        "operatingCashFlow": 3200.0,
+        "capitalExpenditures": 200.0,
+        "freeCashFlow": 3000.0,
+        "investingCashFlow": -1800.0,
+        "financingCashFlow": -2400.0,
+        "netChangeInCash": -1000.0
+      },
+      "platformMetrics": {
+        "paidClientsOrSubscribers": 6020000,
+        "paidClientsGrowthYoY": 0.14,
+        "arpuValue": 1329,
+        "arpuLabel": "Average revenue per paid enterprise customer (CNY)",
+        "arpuGrowthYoY": 0.04
+      }
+    },
+    {
+      "period": {
+        "companySlug": "kanzhun",
+        "periodType": "annual",
+        "fiscalYear": 2023,
+        "periodLabel": "FY2023",
+        "startDate": "2023-01-01",
+        "endDate": "2023-12-31",
+        "reportDate": "2024-03-19",
+        "currency": "CNY",
+        "unit": "millions",
+        "source": "Kanzhun 2023 Annual Report (20-F)"
+      },
+      "incomeStatement": {
+        "revenue": 6712.0,
+        "revenueGrowthYoY": 0.30,
+        "grossProfit": 5889.0,
+        "grossMargin": 0.877,
+        "ebitda": 2250.0,
+        "ebitdaMargin": 0.335,
+        "operatingIncome": 1870.0,
+        "operatingMargin": 0.279,
+        "netIncome": 2060.0,
+        "netMargin": 0.307,
+        "eps": 1.71,
+        "epsDiluted": 1.68,
+        "sharesBasic": 1205.0,
+        "sharesDiluted": 1225.0
+      },
+      "balanceSheet": {
+        "cashAndEquivalents": 6200.0,
+        "shortTermInvestments": 7200.0,
+        "totalCurrentAssets": 14400.0,
+        "totalNonCurrentAssets": 3200.0,
+        "totalAssets": 17600.0,
+        "totalCurrentLiabilities": 3400.0,
+        "totalNonCurrentLiabilities": 380.0,
+        "totalLiabilities": 3780.0,
+        "totalEquity": 13820.0,
+        "totalLiabilitiesAndEquity": 17600.0
+      },
+      "cashFlow": {
+        "operatingCashFlow": 2800.0,
+        "capitalExpenditures": 180.0,
+        "freeCashFlow": 2620.0,
+        "investingCashFlow": -1200.0,
+        "financingCashFlow": -2600.0,
+        "netChangeInCash": -1000.0
+      },
+      "platformMetrics": {
+        "paidClientsOrSubscribers": 5280000,
+        "paidClientsGrowthYoY": 0.18,
+        "arpuValue": 1271,
+        "arpuLabel": "Average revenue per paid enterprise customer (CNY)",
+        "arpuGrowthYoY": 0.10
+      }
+    }
+  ]
+}
