@@ -4,8 +4,9 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const NAV = [
-  { href: '/', label: 'Dashboard', icon: '▦' },
-  { href: '/compare', label: 'Compare', icon: '◈' },
+  { href: '/', label: 'Home', icon: '◈', exact: true },
+  { href: '/dashboard', label: 'Data', icon: '▦' },
+  { href: '/compare', label: 'Compare', icon: '⟺' },
   { href: '/calendar', label: 'Calendar', icon: '◷' },
 ];
 
@@ -15,10 +16,11 @@ export default function BottomNav() {
   return (
     <nav className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-surface border-t border-border flex">
       {NAV.map((item) => {
-        const active =
-          item.href === '/'
-            ? pathname === '/' || pathname.startsWith('/company')
-            : pathname.startsWith(item.href);
+        const active = item.exact
+          ? pathname === item.href
+          : pathname === item.href ||
+            pathname.startsWith(item.href + '/') ||
+            (item.href === '/dashboard' && pathname.startsWith('/company'));
         return (
           <Link
             key={item.href}
@@ -27,7 +29,7 @@ export default function BottomNav() {
               active ? 'text-ink' : 'text-ink-faint'
             }`}
           >
-            <span className="text-base leading-none">{item.icon}</span>
+            <span className="text-[15px] leading-none">{item.icon}</span>
             <span className="text-[10px] tracking-wide uppercase">{item.label}</span>
           </Link>
         );

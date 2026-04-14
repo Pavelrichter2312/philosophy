@@ -39,7 +39,7 @@ export default async function CompanyPage({ params }: Props) {
     <div>
       {/* Breadcrumb */}
       <div className="mb-6 text-[11px] font-mono text-ink-faint">
-        <a href="/" className="hover:text-ink transition-colors">Dashboard</a>
+        <a href="/dashboard" className="hover:text-ink transition-colors">Dashboard</a>
         <span className="mx-2">›</span>
         <span className="text-ink-muted">{company.name}</span>
       </div>
